@@ -2,7 +2,7 @@ const serverURL = window.location.hostname + ":" +  window.location.port;
 
 window.onload = function(){
 
-    const socket = io.connect(serverURL, {secure: false});
+    const socket = io.connect(serverURL, {secure: true});
     // register phone connection
     socket.emit('phone-connect');
 

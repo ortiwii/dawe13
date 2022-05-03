@@ -1,8 +1,7 @@
-
 export var setupSockets = function (){
     const serverURL = window.location.hostname + ":" +  window.location.port;
     // const serverURL = "https://localhost:3030";
-    const socket = io.connect(serverURL, {secure: false});
+    const socket = io.connect(serverURL, {secure: true});
     // register desktop connection
     socket.emit('desktop-connect');
 
